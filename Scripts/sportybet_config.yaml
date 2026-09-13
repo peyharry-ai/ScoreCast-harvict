@@ -1,0 +1,72 @@
+# Sportybet Bot Configuration
+
+# Sportybet Account Credentials
+sportybet:
+  username: "your_username_here"
+  password: "your_password_here"
+  headless: false  # Set to true to run without visible browser window
+
+# Betting Configuration
+betting:
+  stake_per_bet: 10.0  # GHS
+  min_odds: 1.5
+  max_odds: 100.0
+  market_types:
+    - "1X2"           # Win/Draw/Loss
+    - "BTTS"          # Both Teams to Score
+    - "O/U"           # Over/Under
+    - "CORRECT_SCORE" # Correct Score
+  
+  # Auto-select prediction types
+  auto_select:
+    enable: true
+    selection_threshold: 0.65  # Confidence threshold
+
+# Database Configuration
+database:
+  predictions_dir: "Datasets/Predictions"
+  csv_path: null  # Or specify path to CSV file
+  filter_by_confidence: true
+  min_confidence: 0.60
+
+# Anti-Detection Settings
+anti_detection:
+  realistic_delays: true
+  min_delay: 0.5
+  max_delay: 3.0
+  random_mouse_movements: true
+  rotate_user_agents: true
+  use_residential_proxy: false  # Set to true to use proxy
+  proxy_url: null  # e.g., "http://proxy-server:port"
+
+# Browser Settings
+browser:
+  timeout: 30000  # ms
+  screenshot_on_error: true
+  screenshot_dir: "logs/screenshots"
+  viewport_width: 1280
+  viewport_height: 720
+  locale: "en-GH"
+  timezone: "Africa/Accra"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_file: "logs/sportybet_bot.log"
+  max_log_size: 10485760  # 10MB
+  backup_count: 5
+
+# Notifications (Optional)
+notifications:
+  enable_email: false
+  email_recipient: "your_email@gmail.com"
+  enable_telegram: false
+  telegram_bot_token: null
+  telegram_chat_id: null
+
+# Safety Features
+safety:
+  max_bets_per_day: 50
+  pause_before_submit: true  # Pause for manual review
+  dry_run: false  # Test mode - don't actually place bets
+  log_all_actions: true
