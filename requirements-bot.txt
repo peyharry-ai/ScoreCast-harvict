@@ -1,0 +1,24 @@
+# Sportybet Bot Requirements
+# Install: pip install -r requirements-bot.txt
+
+# Browser automation
+playwright>=1.40.0
+undetected-chromedriver>=3.5.5
+
+# Data handling
+pandas>=2.0.3
+numpy>=1.25.1
+
+# Configuration
+pyyaml>=6.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Logging & Monitoring
+python-logging>=0.5.1.2
+
+# Optional: For email/telegram notifications
+# python-telegram-bot>=20.0
+# python-dateutil>=2.8.2
